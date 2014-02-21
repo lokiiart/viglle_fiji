@@ -19,7 +19,7 @@ body {
 <div class="page-header">
 	<h3>Edit your settings</h3>
 </div>
-<form class="form-horizontal" method="post" action="{{ URL::to('user/' . $user->id . '/edit') }}"  autocomplete="off">
+<form class="form-horizontal" method="post" action="{{ URL::to('user/set') }}"  autocomplete="off">
     <!-- CSRF Token -->
     <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
     <!-- ./ csrf token -->
@@ -44,6 +44,28 @@ body {
             </div>
         </div>
         <!-- ./ email -->
+
+        <!-- city -->
+        <div class="form-group {{{ $errors->has('city') ? 'error' : '' }}}">
+            <label class="col-md-2 control-label" for="city">城市</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="city" id="city" value="{{{ Input::old('city', $user->city) }}}" />
+                {{{ $errors->first('city', '<span class="help-inline">:message</span>') }}}
+            </div>
+        </div>
+        <!-- ./ city -->
+
+
+
+        <!-- telephone -->
+        <div class="form-group {{{ $errors->has('telephone') ? 'error' : '' }}}">
+            <label class="col-md-2 control-label" for="telephone">telephone</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="telephone" id="telephone" value="{{{ Input::old('telephone', $user->telephone) }}}" />
+                {{{ $errors->first('telephone', '<span class="help-inline">:message</span>') }}}
+            </div>
+        </div>
+        <!-- ./ telephone -->
 
         <!-- Password -->
         <div class="form-group {{{ $errors->has('password') ? 'error' : '' }}}">

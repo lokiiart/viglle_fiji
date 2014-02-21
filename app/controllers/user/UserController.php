@@ -33,12 +33,21 @@ class UserController extends BaseController {
 			return View::make('fiji/user/index', compact('users'));
 	}
 
-	public function getUserShow(){
-			$user = $this->user->currentUser();
-				if(empty($user)){
-						return Redirect::to('user/login');
-				}
-				$userpics = $this->userpic->where('user_id', '=', $user->id)->orderBy('created_at','DESC')->take(4)->get();
+	public function getUserShow($id){
+        $user = $this->user->where('id','=',$id)->first();
+        if(empty($user)){
+                //return Redirect::to('user/login');
+            return App::abort(404);
+        }
+        $users = $this->user->orderBy('created_at','ASC')->take(8)->get();
+        $usersincity = $this->user->where('city','=',$user->city)->take(8)->get();
+        $p = Input::get('p');
+        $userpics = $this->userpic->where('user_id', '=', $user->id)->orderBy('created_at','DESC')->take(8)->get();
+        $travels = $this->travel->where('user_id','=',$user->id)->orderBy('created_at','DESC')->paginate(5);
+        $comments = $user->comments()->orderBy('created_at', 'DESC')->paginate(4);
+        //TO-DO 加入用户权限控制
+        
+
 
 	//		$user = $this->user->where('id', '=', $user)->first();
 	//		if(is_null($user)){
@@ -46,22 +55,226 @@ class UserController extends BaseController {
 	//		}
 
 	//		//判断是否是用户自己, 若是别人则不显示上传图片和发表攻略链接。
-	//		$user = $this->user->currentUser();
+            $currentuser = $this->user->currentUser();
 	//		if(!empty($user)){
 	//				return App::abort(404);
 
 	//		}
 	//		//结束判断
 
-			return View::make('fiji/user/user',compact('user','userpics'));
+			return View::make('fiji/user/user',compact('usersincity','users','currentuser','user','userpics','travels','comments'));
 	}
 
+    public function postUserShow($id){
+        $owner = $this->user->currentUser();
+        if(is_null($owner)){
+            return Redirect::to('user/login')
+                ->with( 'notice', '评论需要先行登陆' );
+        }
+
+        $user = $this->user->where('id','=',$id)->first();
+
+        
+		$rules = array(
+			'comment' => 'required|min:3'
+		);
+
+		// Validate the inputs
+		$validator = Validator::make(Input::all(), $rules);
+
+		// Check if the form validates with success
+		if ($validator->passes())
+		{
+			// Save the comment
+			$usercomment = new Usercomment;
+			$usercomment->owner_id = Auth::user()->id;
+            $usercomment->user_id = $user->id;
+			$usercomment->content = Input::get('comment');
+
+			// Was the comment saved with success?
+			if($user->comments()->save($usercomment))
+			{
+				// Redirect to this blog post page
+				return Redirect::to('user/show/'.$user->id.'#usercomment')->with('notice', 'Your comment was added with success.');
+			}
+
+			// Redirect to this blog post page
+			return Redirect::to('user/show/'.$user->id.'#usercomment')->with('error', 'There was a problem adding your comment, please try again.');
+		}
+
+		// Redirect to this blog post page
+		return Redirect::to('user/show/'.$user->id.'#usercomment')->withInput()->withErrors($validator);
+    }
+
+
+    public function getSet(){
+        $user = $this->user->currentUser();
+        if(is_null($user)){
+            return Redirect::to('user/login');
+        }
+
+
+        return View::make('fiji/user/set',compact('user'));
+    }
+
+    public function postSet(){
+        $user = $this->user->currentUser();
+        if(is_null($user)){
+            return Redirect::to('user/login');
+        }
+
+		$rules = array(
+			//'avatar' => 'required',
+            'intro' => 'required',
+		);
+
+		// Validate the inputs
+		$validator = Validator::make(Input::all(), $rules);
+
+		// Check if the form validates with success
+		if ($validator->passes())
+		{
+            $oldUser = clone $user;
+            $user->intro = Input::get('intro');
+
+			// Was the comment saved with success?
+            
+            $user->prepareRules($oldUser, $user);
+
+            // Save if valid. Password field will be hashed before save
+            
+			if($user->amend())
+			{
+				// Redirect to this blog post page
+				return Redirect::to('user/show/'.$user->id)->with('notice', '保存成功');
+			}
+
+			// Redirect to this blog post page
+			//return Redirect::to('user/show/'.$user->id.'#usercomment')->with('error', '不要玩了');
+            return var_dump($user);
+		}
+
+		// Redirect to this blog post page
+		//return Redirect::to('user/show/'.$user->id.'#usercomment')->withInput()->withErrors($validator);
+        return e("没验证");
+
+    }
+
+    public function getInfo(){
+        $user = $this->user->currentUser();
+        if(is_null($user)){
+            return Redirect::to('user/login');
+        }
+
+
+        return View::make('fiji/user/info',compact('user'));
+    }
+
+    public function postInfo(){
+        $user = $this->user->currentUser();
+        if(is_null($user)){
+            return Redirect::to('user/login');
+        }
+
+		$rules = array(
+			//'avatar' => 'required',
+            'intro' => 'required',
+		);
+
+		// Validate the inputs
+		$validator = Validator::make(Input::all(), $rules);
+
+		// Check if the form validates with success
+		if ($validator->passes())
+		{
+            $oldUser = clone $user;
+            $user->intro = Input::get('intro');
+
+			// Was the comment saved with success?
+            
+            $user->prepareRules($oldUser, $user);
+
+            // Save if valid. Password field will be hashed before save
+            
+			if($user->amend())
+			{
+				// Redirect to this blog post page
+				return Redirect::to('user/show/'.$user->id)->with('notice', '保存成功');
+			}
+
+			// Redirect to this blog post page
+			//return Redirect::to('user/show/'.$user->id.'#usercomment')->with('error', '不要玩了');
+            return var_dump($user);
+		}
+
+		// Redirect to this blog post page
+		//return Redirect::to('user/show/'.$user->id.'#usercomment')->withInput()->withErrors($validator);
+        return e("没验证");
+
+    }
+
     /**
-     * Users settings page
+     * 用户头像设置页面
      *
      * @return View
      */
-    public function getIndex()
+
+    public function getAvatar(){
+        $user = $this->user->currentUser();
+        if(is_null($user)){
+            return Redirect::to('user/login');
+        }
+
+        $userpics = $this->userpic->where('user_id', '=', $user->id)->orderBy('created_at','DESC')->get();
+
+        return View::make('fiji/user/avatar',compact('userpics'));
+    }
+
+    public function postAvatar(){
+        $user = $this->user->currentUser();
+        if(is_null($user)){
+            return Redirect::to('user/login');
+        }
+
+		$rules = array(
+			//'avatar' => 'required',
+		);
+
+		// Validate the inputs
+		$validator = Validator::make(Input::all(), $rules);
+
+		// Check if the form validates with success
+		if ($validator->passes())
+		{
+            $oldUser = clone $user;
+            $user->avatar = Input::get('avatar');
+
+			// Was the comment saved with success?
+            
+            $user->prepareRules($oldUser, $user);
+
+            // Save if valid. Password field will be hashed before save
+            
+			if($user->amend())
+			{
+				// Redirect to this blog post page
+				return Redirect::to('user/show/'.$user->id)->with('notice', '保存成功');
+			}
+
+			// Redirect to this blog post page
+			//return Redirect::to('user/show/'.$user->id.'#usercomment')->with('error', '不要玩了');
+            return var_dump($user);
+		}
+
+		// Redirect to this blog post page
+		//return Redirect::to('user/show/'.$user->id.'#usercomment')->withInput()->withErrors($validator);
+        return e("没验证");
+
+    }
+
+
+
+    public function getEdit()
     {
         list($user,$redirect) = $this->user->checkAuthAndRedirect('user');
         if($redirect){return $redirect;}
@@ -127,8 +340,13 @@ class UserController extends BaseController {
      * Edits a user
      *
      */
-    public function postEdit($user)
+    public function postEdit()
     {
+        $user = $this->user->currentUser();
+
+        if(is_null($user)){
+            return Redirect::to('user/login');
+        }
         // Validate the inputs
         $validator = Validator::make(Input::all(), $user->getUpdateRules());
 
@@ -138,6 +356,8 @@ class UserController extends BaseController {
             $oldUser = clone $user;
             $user->username = Input::get( 'username' );
             $user->email = Input::get( 'email' );
+            $user->city = Input::get('city');
+            $user->telephone = Input::get('telephone');
 
             $password = Input::get( 'password' );
             $passwordConfirmation = Input::get( 'password_confirmation' );
@@ -168,10 +388,10 @@ class UserController extends BaseController {
         $error = $user->errors()->all();
 
         if(empty($error)) {
-            return Redirect::to('user')
+            return Redirect::to('user/show/'.$user->id)
                 ->with( 'success', Lang::get('user/user.user_account_updated') );
         } else {
-            return Redirect::to('user')
+            return Redirect::to('user/show/'.$user->id)
                 ->withInput(Input::except('password','password_confirmation'))
                 ->with( 'error', $error );
         }

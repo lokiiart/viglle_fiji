@@ -11,6 +11,10 @@ class Travel extends Eloquent{
 		return nl2br($this->content);
 	}
 
+    public function summary(){
+        return strip_tags(nl2br($this->content));
+    }
+
 	/**
 	 * Get the post's author.
 	 *
@@ -44,7 +48,7 @@ class Travel extends Eloquent{
 	 */
 	public function url()
 	{
-		//return Url::to('post/'.$this->slug);
+		return Url::to('travel/'.$this->id.'/show');
 	}
 
 	/**

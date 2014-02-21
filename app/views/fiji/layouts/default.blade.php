@@ -37,6 +37,18 @@
 	</head>
 	<body>
 		<div class="box" id="box">
+
+		<script type="text/javascript">
+			function check_screen()
+			{
+				var w=window.screen.width;
+				if(w<1920)
+				{
+					document.getElementById("box").style.left=-(1920-w)/2+"px";
+				}
+			}
+			check_screen();
+		</script>
 			<!-- 头部开始  -->
 			<div class="head">
 				<div class="head_list">
@@ -55,7 +67,7 @@
 						 @if (Auth::user()->hasRole('admin'))
 						 <li style="font-size:12px;"><a href="{{{ URL::to('admin') }}}"> 管理员</a></li>
 						  @endif
-						 <li style="font-size:12px;"><a href="{{{ URL::to('user/show') }}}"> {{{ Auth::user()->username }}}</a></li>
+						 <li style="font-size:12px;"><a href="{{{ URL::to('user/show/'.Auth::user()->id) }}}"> {{{ Auth::user()->username }}}</a></li>
 						  <li style="font-size:12px;"><a href="{{{ URL::to('user/logout') }}}">登出</a></li>
 						@else
 							<li style="font-size:12px;" {{ (Request::is('user/login') ? ' class="active"' : '') }}><a href="{{{ URL::to('user/login') }}}" class="iframe">登陆</a></li>
@@ -95,18 +107,6 @@
 							$.colorbox.close();
 						});
 				})
-		</script>
-		<script type="text/javascript">
-			function check_screen()
-			{
-				var w=window.screen.width;
-				var width=document.documentElement.clientWidth;
-				if(w<1920)
-				{
-					document.getElementById("box").style.left=-(1920-width)/2+"px";
-				}
-			}
-			check_screen();
 		</script>
 	</body>
 </html>

@@ -100,6 +100,13 @@
 <form method="POST" action="{{{ (Confide::checkAction('UserController@store')) ?: URL::to('user')  }}}" accept-charset="UTF-8">
     <input type="hidden" name="_token" value="{{{ Session::getToken() }}}">
 				<table cellspacing=0 cellpadding=0 style="font-size:18px;color:#313131;" class="mes_show">
+        @if ( Session::get('error') )
+        <div class="alert alert-danger">{{ Session::get('error') }}</div>
+        @endif
+
+        @if ( Session::get('notice') )
+        <div class="alert">{{ Session::get('notice') }}</div>
+        @endif
 					<tr>
 						<td class="td1">邮箱 :&nbsp;</td>
 						<td><input type='text' name="email" id="email" valud="{{{ Input::old('email') }}}") /></td>
@@ -130,7 +137,7 @@
 					</tr>
 				</table>
 			</div>
-				<p style="text-align:center;padding-top:20px;"><input type="checkbox" checked="checked"" />我已阅读和同意YO斐济<span style="color:#0099ff;">《使用条例》</span></p>
+				<p style="text-align:center;padding-top:20px;"><input type="checkbox" checked="checked" />我已阅读和同意YO斐济<span style="color:#0099ff;">《使用条例》</span></p>
 			<button type="submit" class="go_rg"></button>
 				</form>
 			</div>

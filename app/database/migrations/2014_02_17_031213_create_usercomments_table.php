@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTravelTable extends Migration {
+class CreateUsercommentsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -11,15 +12,13 @@ class CreateTravelTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('travels', function($table)
+		Schema::create('usercomments', function($table)
 		{
-			$table->engine = 'InnoDB';
+            $table->engine = 'InnoDB';
 			$table->increments('id')->unsigned();
 			$table->integer('user_id')->unsigned();
-			$table->string('title');
+			$table->integer('owner_id')->unsigned();
 			$table->text('content');
-			$table->integer('mark')->default('0');
-			$table->string('has_pic')->default('http://placehold.it/300x200');
 			$table->timestamps();
 		});
 		//
@@ -32,8 +31,8 @@ class CreateTravelTable extends Migration {
 	 */
 	public function down()
 	{
-			Schema::drop('travels');
 		//
+		Schema::drop('usercomments');
 	}
 
 }

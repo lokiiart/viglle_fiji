@@ -10,15 +10,15 @@
 <script charset="utf-8" src="{{{asset('js/kindeditor/kindeditor.js')}}}"></script>
 		<script charset="utf-8" src="{{{asset('js/kindeditor/lang/zh_CN.js')}}}"></script>
 		<script>
-$(document).ready(function(){
-	$(".ke-upload-area ke-form").prepend("<input type='hidden' name='_token' value='{{{ csrf_token() }}}'>");
-});
 var editor;
 KindEditor.ready(function(K) {
 editor = K.create('textarea[name="content"]', {
 allowFileManager : true,
 uploadJson : 'user/album/upload',
 fileManagerJson : 'user/album/data',
+extraFileUploadParams : {
+    _token: '{{{ csrf_token() }}}',
+},
 items :[
 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
 'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
@@ -43,7 +43,7 @@ editor.html('');
 				<div class="raiders_head"></div>
 					<form method="post" id="form_travel" action="{{{ URL::to('travel/create') }}}" accept-charset="UTF-8">
 		<!-- CSRF Token -->
-		<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+		<input  type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 				<div class="raiders_title">
 					<p>攻略标题<input name="title" type=text value="" id="works_title" /></p>
 				</div>

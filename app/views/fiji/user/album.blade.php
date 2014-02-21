@@ -9,7 +9,7 @@
 </div>
 
 
-<form method="post" class="form-horizontal" enctype="multipart/form-data" action="{{ URL::to('user/album') }}" autocomplete="off">
+<form method="post" class="form-horizontal"  action="{{ URL::to('user/album') }}" autocomplete="off">
 <input type="hidden" name="_token" value="{{{ csrf_token() }}}">
 
 <div class="form-group {{{ $errors->has('pic_url') ? 'error' :'' }}}">

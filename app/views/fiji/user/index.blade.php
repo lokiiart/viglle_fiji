@@ -36,7 +36,7 @@
 				<div class="content_body">
 					<div class="content_user_show">
 							<ul class="content_user_ul">
-								<li class="content_user_card1">我的攻略</li>
+								<li class="content_user_card1">我的好友</li>
 								<li class="content_user_card2" style="margin-left:10px;">我喜欢</li>
 							</ul>
 							<div class="content_user_card_bottom"></div>
@@ -44,12 +44,14 @@
 					<div style="height:1580px;margin-right:-20px;margin-top:15px;">
 						<ul>
 @foreach($users as $user)
+<a href=" {{{ URL::to('user/show/'.$user->id)}}} ">
 							<li class="user_mes">
 								<ul>
-									<li class="user_img"><img src="{{{ asset('images/user1.png')}}}" width=320 height=250 /></li>
-									<li class="user_name"><div class="user_name_box">{{{ $user->username }}}</div><div class="user_word">不喜欢就不要选择，喜欢了就要坚持。</div><div class="user_talk"></div></li>
+									<li class="user_img"><img src=" {{{ $user->avatar }}} " width=320 height=250 /></li>
+									<li class="user_name"><div class="user_name_box">{{{ $user->username }}}</div><div class="user_word">{{{$user->intro}}}</div><div class="user_talk"></div></li>
 								</ul>
 							</li>
+</a>
 @endforeach
 						</ul>
 					</div>

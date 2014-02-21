@@ -26,8 +26,39 @@ class UserpicController extends BaseController {
 
 
 		public function postAlbumData(){
-				$test = Input::all();
-				return var_dump($test);
+				$user = $this->user->currentUser();
+
+				$rules = array(
+						'imgFile' => 'image|max:1000'
+						);
+
+				$validator = Validator::make(Input::all(), $rules);
+
+				if($validator->passes()){
+
+						$this->userpic->user_id = Auth::user()->id;
+
+
+						//图片处理
+						$imgDir = $this->iArtMkPicDir($this->userpic->user_id);
+
+						$this->userpic->pic_url = $imgDir;
+						$image = Input::file('imgFile');
+						$filetype = substr(Input::file('imgFile')->getMimeType(),6);
+						$filesize = Input::file('imgFile')->getSize();
+						$this->userpic->filename = $this->iArtSavePic($imgDir,$image,$filetype);
+						$this->userpic->filesize = $filesize;
+						$this->userpic->filetype = $filetype;
+
+
+						if($this->userpic->save()){
+								//return Redirect::to('user/album')->with('success', '成功添加一张照片');
+                            return Response::json(array('error' => 0, 'url' => '../'.$imgDir.'/'.$this->userpic->filename));
+						}
+								return Redirect::to('user/album')->with('error', '添加照片错误，账号问题请登录重试！');
+				}
+
+				return Redirect::to('user/album')->with('error', '程序错误，请联系管理员');
 		}
 
 		public function getAlbumData(){

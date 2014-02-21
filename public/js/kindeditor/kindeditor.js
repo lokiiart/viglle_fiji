@@ -4195,7 +4195,7 @@ function _createButton(arg) {
 	arg = arg || {};
 	var name = arg.name || '',
 		span = K('<span class="ke-button-common ke-button-outer" title="' + name + '"></span>'),
-		btn = K('<input class="ke-button-common ke-button" type="button" value="' + name + '" onclick="$(".ke-upload-area ke-form").prepend("<input type=\'hidden\' name=\'_token\' value=\'{{{ csrf_token() }}}\'>");" />');
+		btn = K('<input class="ke-button-common ke-button" type="button" value="' + name + '" />');
 	if (arg.click) {
 		btn.click(arg.click);
 	}

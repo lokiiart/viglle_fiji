@@ -11,8 +11,9 @@ class TravelController extends BaseController{
 		}
 
 		public function getIndex(){
-				$travels = $this->travel->orderBy('created_at', 'DESC')->get();
-				return View::make('fiji/travel/index',compact('travels'));
+                $user = $this->user->currentUser();
+				$travels = $this->travel->orderBy('created_at', 'DESC')->paginate(10);
+				return View::make('fiji/travel/index',compact('travels','user'));
 		}
 
 		public function getCreate(){
@@ -42,6 +43,7 @@ class TravelController extends BaseController{
 
 						$this->travel->title   = Input::get('title');
 						$this->travel->content = Input::get('content');
+                        $this->travel->has_pic = $this->getpic($this->travel->content);
 
 						if($this->travel->save()){
 								return Redirect::to('travel/'.$this->travel->id.'/show')->with('success','成功发布旅游攻略');
@@ -52,4 +54,45 @@ class TravelController extends BaseController{
 				return Redirect::to('travel/create')->withInput()->withErrors($validator);
 		}
 
+
+      private  function getpic($str_img){
+                preg_match_all("/<img.*\>/isU",$str_img,$ereg);//正则表达式把图片的整个都获取出来了 
+                $img=$ereg[0][0];//图片 
+                $p="#src=('|\")(.*)('|\")#isU";//正则表达式
+                preg_match_all ($p, $img, $img1); 
+                $img_path =$img1[2][0];//获取第一张图片路径  
+                return $img_path; 
+    }
+
+
+        public function getShow($id){
+            $travel = $this->travel->where('id','=',$id)->first();
+            $author = $this->user->where('id','=',$travel->user_id)->first();
+            if(is_null($travel)){
+                return App::abort(404);
+            }
+            $user = $this->user->currentUser();
+            //return var_dump($author);
+            return View::make('fiji/travel/show',compact('travel','user','author'));
+        }
+
+
+        public function addMark(){
+            //TO-DO添加验证
+            $user_id = Input::get('user_id');
+            $travel_id = Input::get('travel_id');
+            $travel = $this->travel->where('id','=', $travel_id)->first();
+            $travel->mark++;
+            $travel->save();
+            return Response::json(array('mark' => $travel->mark));
+        }
+        public function subMark(){
+            //TO-DO添加验证
+            $user_id = Input::get('user_id');
+            $travel_id = Input::get('travel_id');
+            $travel = $this->travel->where('id','=', $travel_id)->first();
+            $travel->mark--;
+            $travel->save();
+            return Response::json(array('mark' => $travel->mark));
+        }
 }

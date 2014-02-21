@@ -6,6 +6,7 @@ use Zizaco\Confide\ConfideEloquentRepository;
 use Zizaco\Entrust\HasRole;
 use Robbo\Presenter\PresentableInterface;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\URL; # not sure why i need this here :c
 
 class User extends ConfideUser implements PresentableInterface {
     use HasRole;
@@ -53,6 +54,11 @@ class User extends ConfideUser implements PresentableInterface {
         } else {
             $this->roles()->detach();
         }
+    }
+
+
+    public function url(){
+        return Url::to('user/show');
     }
 
     /**
@@ -103,6 +109,10 @@ class User extends ConfideUser implements PresentableInterface {
     public function currentUser()
     {
         return (new Confide(new ConfideEloquentRepository()))->user();
+    }
+
+    public function comments(){
+        return $this->hasMany('Usercomment');
     }
 
 
