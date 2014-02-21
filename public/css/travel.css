@@ -1,12 +1,12 @@
 .content
 {
 			margin-top:50px;
-				height:2555px;
+			height:auto;
 		}
 		.content_body
 		{
 					width:100%;
-						height:2260px;
+						height:auto;
 				}
 				.content_user_show
 				{
@@ -123,7 +123,7 @@
 
 																																																																		.show_page_1 li,.show_page_2 li
 																																																																		{
-																																																																					margin-top:30px;
+																																																																					
 																																																																						float:left;
 																																																																							width:30px;
 																																																																								height:40px;
@@ -159,7 +159,7 @@
 																																																																																		.raiders_msg
 																																																																																		{
 																																																																																					width:100%;
-																																																																																						height:2190px;
+																																																																																						height:auto;
 																																																																																				}
 																																																																																				.raiders_user_name
 																																																																																				{

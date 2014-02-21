@@ -1,12 +1,16 @@
 .content
 {
-	height:2830px;
+	height:auto;
 }
 .hotel_1
 {
 	height:500px;
 	margin-top:30px;
 	width:100%;
+}
+.head
+{
+	background:url(../images/hotel.jpg) center 0px;
 }
 .hotel_part1
 {
@@ -23,7 +27,9 @@
 	position:absolute;
 	top:430px;
 	height:80px;
-	width:100%;
+	width:100%;
+
+
 	z-index:44;
 }
 .hotel_base
