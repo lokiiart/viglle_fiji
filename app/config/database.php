@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'viglle_fiji',
 			'username'  => 'root',
-			'password'  => 'a4e5h5s6x6',
+			'password'  => 'goodluck',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

@@ -1,186 +1,186 @@
 .content
 {
-			margin-top:50px;
-				height:2555px;
-		}
-		.content_body
-		{
-					width:100%;
-						height:2260px;
-				}
-				.content_user_show
-				{
-							float:left;
-								height:45px;
-									width:100%;
-							}
-							.content_user_ul
-							{
-										height:35px;
-											width:350px;
-												background:#f2f2f2;
-													margin-left:690px;
-											}
-											.content_user_ul li
-											{
-														width:150px;
-															height:35px;
-																float:left;
-																	text-align:center;
-																		line-height:35px;
-																			font-size:18px;
-																				cursor:pointer;
-																		}
-																		.content_user_card1
-																		{
-																					color:white;
-																						background:#ff9500;
-																				}
-																				.content_user_card2
-																				{
-																							color:black;
-																								background:#e6e6e6;
-																						}
-																						.content_user_card_bottom
-																						{
-																									clear:both;
-																										height:5px;
-																											width:100%;
-																												background:#ff9500;
-																										}
+margin-top:50px;
+		
+}
+.content_body
+{
+width:100%;
+height:auto;
+}
+.content_user_show
+{
+float:left;
+height:45px;
+width:100%;
+}
+.content_user_ul
+{
+height:35px;
+width:350px;
+background:#f2f2f2;
+margin-left:690px;
+}
+.content_user_ul li
+{
+width:150px;
+height:35px;
+float:left;
+text-align:center;
+line-height:35px;
+font-size:18px;
+cursor:pointer;
+}
+.content_user_card1
+{
+color:white;
+background:#ff9500;
+}
+.content_user_card2
+{
+color:black;
+background:#e6e6e6;
+}
+.content_user_card_bottom
+{
+clear:both;
+height:5px;
+width:100%;
+background:#ff9500;
+}
 
-																										.content_show
-																										{
-																													width:1000px;
-																														float:left;
-																															height:2200px;
-																																background:#e6e6e6;
-																																	border:0px solid red;
-																															}
-																															.content_show_text
-																															{
-																																		float:left;
-																																			width:700px;
-																																				height:2100px;
-																																					background:white;
-																																						margin:30px auto;
-																																				}
-																																				.content_show_title
-																																				{
-																																							border:1px solid #acacac;
-																																								width:100%;
-																																									height:70px;
-																																							}
-																																							.content_show_title ul li
-																																							{
-																																										float:left;
-																																								}
-																																								.content_show_border
-																																								{
-																																											width:5px;
-																																												height:70px;
-																																													background:#ff9500;
-																																											}
-																																											.content_show_title ul li p
-																																											{
-																																														height:30px;
-																																															line-height:30px;
-																																													}
-																																													.raiders_img
-																																													{
-																																																margin-left:15px;
-																																																	margin-top:10px;
-																																															}
-																																															.raiders_show_msg
-																																															{
-																																																		margin-left:20px;
-																																																}
-																																																.raiders_user_name
-																																																{
-																																																			color:#ff9500;
-																																																				text-decoration:underline;
-																																																		}
-																																																		.raiders_user_time
-																																																		{
-																																																					color:#808080;
-																																																						margin-left:5px;
-																																																				}
-																																																				.raiders_title
-																																																				{
-																																																							color:#0099ff;
-																																																					}
-																																																					.raiders_show_html
-																																																					{
-																																																								height:1950px;
-																																																									width:100%;
-																																																										border:0px solid red;
-																																																								}
-																																																								.raiders_other_mes
-																																																								{
-																																																											margin-left:480px;
-																																																									}
-																																																									.raiders_other_mes ul li
-																																																									{
-																																																												float:left;
-																																																													width:49px;
-																																																														height:49px;
-																																																															margin-left:20px;
-																																																																cursor:pointer;
-																																																														}
-																																																														.raiders_more
-																																																														{
-																																																																	float:left;
-																																																																		width:278px;
-																																																																			height:860px;
-																																																																				border:0px solid red;
-																																																																					margin-left:22px;
-																																																																			}
+.content_show
+{
+width:1000px;
+float:left;
+height:auto;
+background:#e6e6e6;
+border:0px solid red;
+}
+.content_show_text
+{
+float:left;
+width:700px;
+height:auto;
+background:white;
+margin:30px auto;
+}
+.content_show_title
+{
+border:1px solid #acacac;
+width:100%;
+height:70px;
+}
+.content_show_title ul li
+{
+float:left;
+}
+.content_show_border
+{
+width:5px;
+height:70px;
+background:#ff9500;
+}
+.content_show_title ul li p
+{
+height:30px;
+line-height:30px;
+}
+.raiders_img
+{
+margin-left:15px;
+margin-top:10px;
+}
+.raiders_show_msg
+{
+margin-left:20px;
+}
+.raiders_user_name
+{
+color:#ff9500;
+text-decoration:underline;
+}
+.raiders_user_time
+{
+color:#808080;
+margin-left:5px;
+}
+.raiders_title
+{
+color:#0099ff;
+}
+.raiders_show_html
+{
+height:auto;
+width:100%;
+border:0px solid red;
+}
+.raiders_other_mes
+{
+margin-left:480px;
+}
+.raiders_other_mes ul li
+{
+float:left;
+width:49px;
+height:49px;
+margin-left:20px;
+cursor:pointer;
+}
+.raiders_more
+{
+float:left;
+width:278px;
+height:860px;
+border:0px solid red;
+margin-left:22px;
+}
 
-																																																																			.good
-																																																																			{
-																																																																						background:url(../images/good.png);
-																																																																				}
-																																																																				.share
-																																																																				{
-																																																																							background:url(../images/share.png);
-																																																																					}
+.good
+{
+background:url(../images/good.png);
+}
+.share
+{
+background:url(../images/share.png);
+}
 
-																																																																					.user_img
-																																																																					{
-																																																																								height:250px;
-																																																																									width:100%;
-																																																																							}
-																																																																							.user_mes
-																																																																							{
-																																																																										width:319px;
-																																																																											height:388px;
-																																																																												background:#0099ff;
-																																																																													float:left;
-																																																																														margin-right:20px;
-																																																																															margin-top:20px;
-																																																																													}
-																																																																													.user_mes ul li
-																																																																													{
-																																																																																
-																																																																													}
-																																																																													.user_img
-																																																																													{
-																																																																																z-index:1;
-																																																																														}
-																																																																														.user_name
-																																																																														{
-																																																																																	height:125px;
-																																																																																		background:white;
-																																																																																			position:relative;
-																																																																																	}
-																																																																																	.user_call
-																																																																																	{
-																																																																																				width:100%;
-																																																																																					height:7px;
-																																																																																						background:#0099ff;
-																																																																																				}
-																																																																																				.user_name_box
-																																																																																				{
+.user_img
+{
+height:250px;
+width:100%;
+}
+.user_mes
+{
+width:319px;
+height:388px;
+background:#0099ff;
+float:left;
+margin-right:20px;
+margin-top:20px;
+}
+.user_mes ul li
+{
+
+}
+.user_img
+{
+z-index:1;
+}
+.user_name
+{
+height:125px;
+background:white;
+position:relative;
+}
+.user_call
+{
+width:100%;
+height:7px;
+background:#0099ff;
+}
+.user_name_box
+																																																															{
 																																																																																							position:absolute;
 																																																																																								top:-20px;
 																																																																																									left:45px;

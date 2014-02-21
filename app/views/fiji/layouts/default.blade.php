@@ -36,52 +36,42 @@
 		<link rel="shortcut icon" href="{{{ asset('assets/ico/favicon.png') }}}">
 	</head>
 	<body>
-		<div class="box" id="box">
-
-		<script type="text/javascript">
-			function check_screen()
-			{
-				var w=window.screen.width;
-				if(w<1920)
-				{
-					document.getElementById("box").style.left=-(1920-w)/2+"px";
-				}
-			}
-			check_screen();
-		</script>
 			<!-- 头部开始  -->
-			<div class="head">
-				<div class="head_list">
-					<div class="logo"></div>
-					<div class="list">
-						<ul class="list_card">
-								<li><a href="{{{ URL::to('/') }}}">首页</a></li>
-								<li class="list_index"><a href="{{{ URL::to('/hotel/index') }}}">酒店</a></li>
-							<li><a href="{{{ URL::to('/ticket/index') }}}">机票</a></li>
-							<li class="list_end"><a href="{{{ URL::to('/travel/index') }}}">攻略</a></li>
-						</ul>
-					</div>
-					<div class="login">
-						<ul class="login_card">
-                        @if (Auth::check())
-						 @if (Auth::user()->hasRole('admin'))
-						 <li style="font-size:12px;"><a href="{{{ URL::to('admin') }}}"> 管理员</a></li>
-						  @endif
-						 <li style="font-size:12px;"><a href="{{{ URL::to('user/show/'.Auth::user()->id) }}}"> {{{ Auth::user()->username }}}</a></li>
-						  <li style="font-size:12px;"><a href="{{{ URL::to('user/logout') }}}">登出</a></li>
-						@else
-							<li style="font-size:12px;" {{ (Request::is('user/login') ? ' class="active"' : '') }}><a href="{{{ URL::to('user/login') }}}" class="iframe">登陆</a></li>
-							<li style="font-size:12px;" {{ (Request::is('user/register') ? ' class="active"' : '') }}><a href="{{{ URL::to('user/create') }}}" class="iframe">{{{ Lang::get('site.sign_up') }}}</a></li>
-                        @endif
-						</ul>
-					</div>
-@section('userprofile')
-					<div class="love_feiji">
-						<div class="love_word">世界上有两个天堂,一个在你心里,一个在斐济。</div>
-					</div>
-@show
+			<div class="box">
+				<div class="head" style="position:absolute;top:0px;z-index:1;"></div>
+				<div style="width:1000px;margin-right:auto;margin-left:auto;z-index:2;position:relative;height:630px;">
+					<div class="head_list">
+						<div class="logo"></div>
+						<div class="list">
+							<ul class="list_card">
+									<li><a href="{{{ URL::to('/') }}}">首页</a></li>
+									<li class="list_index"><a href="{{{ URL::to('/hotel/index') }}}">酒店</a></li>
+								<li><a href="{{{ URL::to('/ticket/index') }}}">机票</a></li>
+								<li class="list_end"><a href="{{{ URL::to('/travel/index') }}}">攻略</a></li>
+							</ul>
+						</div>
+						<div class="login">
+							<ul class="login_card">
+	                        @if (Auth::check())
+							 @if (Auth::user()->hasRole('admin'))
+							 <li style="font-size:12px;"><a href="{{{ URL::to('admin') }}}"> 管理员</a></li>
+							  @endif
+							 <li style="font-size:12px;"><a href="{{{ URL::to('user/show/'.Auth::user()->id) }}}"> {{{ Auth::user()->username }}}</a></li>
+							  <li style="font-size:12px;"><a href="{{{ URL::to('user/logout') }}}">登出</a></li>
+							@else
+								<li style="font-size:12px;" {{ (Request::is('user/login') ? ' class="active"' : '') }}><a href="{{{ URL::to('user/login') }}}" class="iframe">登陆</a></li>
+								<li style="font-size:12px;" {{ (Request::is('user/register') ? ' class="active"' : '') }}><a href="{{{ URL::to('user/create') }}}" class="iframe">{{{ Lang::get('site.sign_up') }}}</a></li>
+	                        @endif
+							</ul>
+						</div>
+					@section('userprofile')
+						<div class="love_feiji">
+							<div class="love_word">世界上有两个天堂,一个在你心里,一个在斐济。</div>
+						</div>
+				@show
 				</div>
 			</div>
+		</div>
 			<!-- 头部结束  -->
 			@include('notifications')
 			<!-- ./ notifications -->
@@ -96,7 +86,6 @@
 				<div class="bottom_href"></div>
 			</div>
 			<!-- 底部结束  -->
-		</div>
         {{ Basset::show('public.js') }}
 		@section('scripts')
 		@show

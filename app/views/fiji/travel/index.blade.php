@@ -39,8 +39,9 @@
 @endforeach
 							
 						</ul>
+                        <div style="clear:both;"></div>
 					</div>
-					<div>
+					<div style="width:100%;height:40px;margin-top:30px;">
 						<ul class="show_page_1">
 {{ $travels->links() }}
 							<li  class="show_li_1">1</li>
