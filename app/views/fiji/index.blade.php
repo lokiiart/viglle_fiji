@@ -262,13 +262,13 @@
 				<div class="content_bottom"></div>
 				<div style="height:845px;width:100%;margin-top:45px;">
 					<p><span style="font-size:30px;margin-left:30px;color:#ff9500;">人气</span><span style="font-size:18px;color:#333;">之星</span></p>
-					<ul style="margin-right:-20px">
-@foreach($users as $user)
-						<li class="user_mes">
+					<ul>
+				<?php $i=0;?>
+				@foreach($users as $user)
+				<?php $i++;?>
+						<li class="user_mes" <?php if($i%3==0 && $i!=0){echo 'style=margin-right:0px;';} ?>>
 							<ul>
-                                <a href=" {{{ URL::to('user/show/'.$user->id) }}} ">
-								<li class="user_img"><img src="{{{$user->avatar}}}" width=320 height=250 /></li>
-                                </a>
+								<li class="user_img"> <a href=" {{{ URL::to('user/show/'.$user->id) }}} "><img src="{{{$user->avatar}}}" width=320 height=250 /></a></li>
 								<li class="user_name"><div class="user_name_box">{{{$user->username}}}</div><div class="user_word">{{{$user->intro}}}</div>
                                 <a href=" {{{ URL::to('user/show/'.$user->id.'#usercomment') }}} ">
                                 <div class="user_talk"></div>
@@ -276,7 +276,7 @@
                                 </li>
 							</ul>
 						</li>
-@endforeach
+				@endforeach
 						<li class="user_mes">
 							<ul>
 								<li class="user_img"><img src="images/user1.png" width=320 height=250 /></li>
@@ -289,7 +289,7 @@
 								<li class="user_name"><div class="user_name_box">漫天小星星</div><div class="user_talk"></div></li>
 							</ul>
 						</li>
-						<li class="user_mes">
+						<li class="user_mes" style="margin-right:0px">
 							<ul>
 								<li class="user_img"><img src="images/user1.png" width=320 height=250 /></li>
 								<li class="user_name"><div class="user_name_box">漫天小星星</div><div class="user_talk"></div></li>

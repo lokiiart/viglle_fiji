@@ -197,9 +197,7 @@
 }
 .plane_bg
 {
-	width:379px;
-	height:35px;
-	background:#0099ff;
+	
 }
 .inputs
 {
@@ -266,9 +264,9 @@
 	width:319px;
 	height:388px;
 	background:#0099ff;
-	float:left;
-	margin-right:20px;
+	float:left;
 	margin-top:20px;
+	margin-right:20px;
 }
 .user_mes ul li
 {

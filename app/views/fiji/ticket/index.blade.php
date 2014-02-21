@@ -69,7 +69,7 @@
 				<p style="margin-left:30px;margin-top:40px;"><span style="font-size:30px;color:red;">特价 </span><strong style="color:#333333;">机票</strong></p>
 				<div class="search">
 					<div class="search_box">
-						<div class="city"><input type=text style="width:88px;height:28px;border:0px;" /></div>
+						<div class="city"><input type=text style="width:88px;height:26px;border:0px;position:absolute;left:1px;" /></div>
 						<div class="city_border"></div>
 						<div class="fly"></div>
 						<div class="go_city">斐济</div>

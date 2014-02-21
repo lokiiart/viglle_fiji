@@ -1,5 +1,4 @@
 @extends('fiji.layouts.default')
-
 @section('content')
 			<div class="content">
 				<p class="content_title"><span style="font-size:30px;color:#0099ff;">特色</span><strong style="color:#333333;">酒店</strong></p>
@@ -174,7 +173,6 @@
 					</div>
 				</div>
 			</div>
-@stop
 			<script>
 				function show_bg(num)
 				{
@@ -185,3 +183,5 @@
 					$(".hotel_base").eq(num).slideUp("fast");
 				}
 			</script>
+@stop
+			
