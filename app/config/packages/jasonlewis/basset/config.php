@@ -34,7 +34,6 @@ return array(
             {
                 $collection->add('less/master.less')->apply('Less');
 				$collection->add('base.css');
-				$collection->add('hotel.css');
                 $collection->add('colorbox.css');
             })->apply('UriRewriteFilter')->apply('CssMin');
 

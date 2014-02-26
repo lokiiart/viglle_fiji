@@ -1,223 +1,227 @@
+.head
+{
+	background:url(../assets/images/travel.jpg) center 0px;
+}
 .content
 {
-			margin-top:50px;
-			height:auto;
-		}
-		.content_body
-		{
-					width:100%;
-						height:auto;
-				}
-				.content_user_show
-				{
-							float:left;
-								height:45px;
-									width:100%;
-							}
-							.content_user_ul
-							{
-										height:35px;
-											width:350px;
-												background:#f2f2f2;
-													margin-left:690px;
-											}
-											.content_user_ul li
-											{
-														width:150px;
-															height:35px;
-																float:left;
-																	text-align:center;
-																		line-height:35px;
-																			font-size:18px;
-																				cursor:pointer;
-																		}
-																		.content_user_card1
-																		{
-																					color:white;
-																						background:#ff9500;
-																				}
-																				.content_user_card2
-																				{
-																							color:black;
-																								background:#e6e6e6;
-																						}
-																						.content_user_card_bottom
-																						{
-																									clear:both;
-																										height:5px;
-																											width:100%;
-																												background:#ff9500;
-																										}
-																										.user_img
-																										{
-																													height:250px;
-																														width:100%;
-																												}
-																												.user_mes
-																												{
-																															width:319px;
-																																height:388px;
-																																	background:#0099ff;
-																																		float:left;
-																																			margin-right:20px;
-																																				margin-top:20px;
-																																		}
-																																		.user_mes ul li
-																																		{
-																																					
-																																		}
-																																		.user_img
-																																		{
-																																					z-index:1;
-																																			}
-																																			.user_name
-																																			{
-																																						height:125px;
-																																							background:white;
-																																								position:relative;
-																																						}
-																																						.user_call
-																																						{
-																																									width:100%;
-																																										height:7px;
-																																											background:#0099ff;
-																																									}
-																																									.user_name_box
-																																									{
-																																												position:absolute;
-																																													top:-20px;
-																																														left:45px;
-																																															width:230px;
-																																																height:42px;
-																																																	background:#ff9500;
-																																																		text-align:center;
-																																																			color:white;
-																																																				line-height:42px;
-																																																					font-size:18px;
-																																																						z-index:2;
-																																																				}
-																																																				.user_word
-																																																				{
-																																																							position:absolute;
-																																																								top:30px;
-																																																									left:40px;
-																																																										width:270px;
-																																																											color:#333;
-																																																												font-size:16px;
-																																																										}
-																																																										.user_talk
-																																																										{
-																																																													position:absolute;
-																																																														cursor:pointer;
-																																																															top:89px;
-																																																																left:260px;
-																																																																	width:40px;
-																																																																		height:50px;
-																																																																			background:url(../images/message1.png);
-																																																																	}
-																																																																	.user_talk:hover
-																																																																	{
-																																																																				background:url(../images/message2.png);
-																																																																		}
+margin-top:50px;
+height:auto;
+}
+.content_body
+{
+width:100%;
+height:auto;
+}
+.content_user_show
+{
+float:left;
+height:45px;
+width:100%;
+}
+.content_user_ul
+{
+height:35px;
+width:350px;
+background:#f2f2f2;
+margin-left:690px;
+}
+.content_user_ul li
+{
+width:150px;
+height:35px;
+float:left;
+text-align:center;
+line-height:35px;
+font-size:18px;
+cursor:pointer;
+}
+.content_user_card1
+{
+color:white;
+background:#ff9500;
+}
+.content_user_card2
+{
+color:black;
+background:#e6e6e6;
+}
+.content_user_card_bottom
+{
+clear:both;
+height:5px;
+width:100%;
+background:#ff9500;
+}
+.user_img
+{
+height:250px;
+width:100%;
+}
+.user_mes
+{
+width:319px;
+height:388px;
+background:#0099ff;
+float:left;
+margin-right:20px;
+margin-top:20px;
+}
+.user_mes ul li
+{
+
+}
+.user_img
+{
+z-index:1;
+}
+.user_name
+{
+height:125px;
+background:white;
+position:relative;
+}
+.user_call
+{
+width:100%;
+height:7px;
+background:#0099ff;
+}
+.user_name_box
+{
+position:absolute;
+top:-20px;
+left:45px;
+width:230px;
+height:42px;
+background:#ff9500;
+text-align:center;
+color:white;
+line-height:42px;
+font-size:18px;
+z-index:2;
+}
+.user_word
+{
+position:absolute;
+top:30px;
+left:40px;
+width:270px;
+color:#333;
+font-size:16px;
+}
+.user_talk
+{
+position:absolute;
+cursor:pointer;
+top:89px;
+left:260px;
+width:40px;
+height:50px;
+background:url(../images/message1.png);
+}
+.user_talk:hover
+{
+background:url(../images/message2.png);
+}
 
 
-																																																																		.show_page_1 li,.show_page_2 li
-																																																																		{
-																																																																					
-																																																																						float:left;
-																																																																							width:30px;
-																																																																								height:40px;
-																																																																									text-align:center;
-																																																																										line-height:40px;
-																																																																											margin-left:10px;
-																																																																												cursor:pointer;
-																																																																										}
-																																																																										.show_page_next,.show_li_2
-																																																																										{
-																																																																													color:#808080;
-																																																																														background:#e6e6e6;
-																																																																												}
-																																																																												.show_page_next
-																																																																												{
-																																																																															width:100px !important;
-																																																																													}
-																																																																													.show_li_1
-																																																																													{
-																																																																																color:white;
-																																																																																	background:#ff9500;
-																																																																															}
-																																																																															.show_page_1,.show_page_2
-																																																																															{
-																																																																																		margin-left:400px;
-																																																																																			margin-top:10px;
-																																																																																	}
+.show_page_1 li,.show_page_2 li
+{
 
-																																																																																	.raiders_title
-																																																																																	{
-																																																																																				color:#0099ff;
-																																																																																		}
-																																																																																		.raiders_msg
-																																																																																		{
-																																																																																					width:100%;
-																																																																																						height:auto;
-																																																																																				}
-																																																																																				.raiders_user_name
-																																																																																				{
-																																																																																							color:#ff9500;
-																																																																																								text-decoration:underline;
-																																																																																						}
-																																																																																						.raiders_user_time
-																																																																																						{
-																																																																																									color:#808080;
-																																																																																										margin-left:5px;
-																																																																																								}
-																																																																																								.raiders_user_text
-																																																																																								{
-																																																																																											color:#808080;
-																																																																																									}
-																																																																																									.raiders_user_good
-																																																																																									{
-																																																																																												width:49px;
-																																																																																													height:49px;
-																																																																																														background:url(../images/good.png);
-																																																																																															cursor:pointer;
-																																																																																																margin-left:650px;
-																																																																																														}
-																																																																																														.good_count
-																																																																																														{
-																																																																																																	color:#ff9500;
-																																																																																																		margin-right:10px;
-																																																																																																}
-																																																																																																.content_other_mes
-																																																																																																{
-																																																																																																			float:left;
-																																																																																																				width:230px;
-																																																																																																					height:100%;
-																																																																																																						margin-left:10px;
-																																																																																																				}
-																																																																																																				.enter_raiders
-																																																																																																				{
-																																																																																																							margin-top:35px;
-																																																																																																								width:230px;
-																																																																																																									height:145px;
-																																																																																																										background:url(../images/enter_raiders_1.png);
-																																																																																																											cursor:pointer;
-																																																																																																									}
-																																																																																																									.raiders_content li
-																																																																																																									{
-																																																																																																												margin-top:25px;
-																																																																																																													float:left;
-																																																																																																														background:#e6e6e6;
-																																																																																																															height:200px;
-																																																																																																													}
-																																																																																																													.raiders_li1
-																																																																																																													{
-																																																																																																																clear:both;
-																																																																																																																	width:300px;
-																																																																																																																		height:200px;
-																																																																																																																}
-																																																																																																																.raiders_li2
-																																																																																																																{
-																																																																																																																			width:700px;
-																																																																																																																				height:200px;
-																																																																																																																		}
+float:left;
+width:30px;
+height:40px;
+text-align:center;
+line-height:40px;
+margin-left:10px;
+cursor:pointer;
+}
+.show_page_next,.show_li_2
+{
+color:#808080;
+background:#e6e6e6;
+}
+.show_page_next
+{
+width:100px !important;
+}
+.show_li_1
+{
+color:white;
+background:#ff9500;
+}
+.show_page_1,.show_page_2
+{
+margin-left:400px;
+margin-top:10px;
+}
+
+.raiders_title
+{
+color:#0099ff;
+}
+.raiders_msg
+{
+width:100%;
+height:auto;
+}
+.raiders_user_name
+{
+color:#ff9500;
+text-decoration:underline;
+}
+.raiders_user_time
+{
+color:#808080;
+margin-left:5px;
+}
+.raiders_user_text
+{
+color:#808080;
+}
+.raiders_user_good
+{
+width:49px;
+height:49px;
+background:url(../images/good.png);
+cursor:pointer;
+margin-left:650px;
+}
+.good_count
+{
+color:#ff9500;
+margin-right:10px;
+}
+.content_other_mes
+{
+float:left;
+width:230px;
+height:100%;
+margin-left:10px;
+}
+.enter_raiders
+{
+margin-top:35px;
+width:230px;
+height:145px;
+background:url(../images/enter_raiders_1.png);
+cursor:pointer;
+}
+.raiders_content li
+{
+margin-top:25px;
+float:left;
+background:#e6e6e6;
+height:200px;
+}
+.raiders_li1
+{
+clear:both;
+width:300px;
+height:200px;
+}
+.raiders_li2
+{
+width:700px;
+height:200px;
+}

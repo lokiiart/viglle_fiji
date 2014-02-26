@@ -1,7 +1,8 @@
 @extends('fiji.layouts.default')
 
 @section('styles')
-<link rel="stylesheet" type="text/css" href="{{{ asset('css/air.css') }}}" />
+<link rel="stylesheet" type="text/css" href="{{{ asset('assets/css/air.css') }}}" />
+
 @stop
 
 

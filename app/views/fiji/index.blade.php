@@ -2,6 +2,10 @@
 @section('styles')
 		@parent
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="{{{ asset('assets/css/hotel.css') }}}" />
+		<style>
+			.head{background:url(../assets/images/index.jpg) center 0px;}
+		</style>
 @stop
 @section('content')
 			<!-- 正文开始  -->

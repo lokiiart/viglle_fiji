@@ -13,17 +13,13 @@ body
 }
 .box
 {
-	position:relative;
-	width:1920px;
-	margin:0px auto;
-	background:#f2f2f2;
+	width: 100%;
 }
 /** 头部    **/
 .head
 {
 	width:1920px;
-	height:630px;
-	background:url(/assets/images/hotel_bg.jpg) center 0px;
+	height:500px;
 }
 /** 头部导航栏  **/
 .head_list
@@ -42,7 +38,7 @@ body
 {
 	width:106px;
 	height:40px;
-	background:url(/assets/images/logo.png) no-repeat;
+	background:url(/assets/images/Logo.png) no-repeat;
 }
 ul
 {
@@ -130,6 +126,7 @@ ul
 /** 尾部  **/
 .bottom
 {
+	margin-top: 50px;
 	height:850px;
 	width:1920px;
 }
