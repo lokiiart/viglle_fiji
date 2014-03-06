@@ -1,5 +1,13 @@
 @extends('fiji.layouts.default')
 
+@section('styles')
+		@parent
+		
+		<link rel="stylesheet" type="text/css" href="{{{ asset('assets/css/hotel.css') }}}" />
+		
+
+
+@stop
 @section('content')
 			<div class="content">
 				<p class="content_title"><span style="font-size:30px;color:#0099ff;">特色</span><strong style="color:#333333;">酒店</strong></p>

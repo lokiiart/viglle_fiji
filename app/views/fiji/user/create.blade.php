@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title></title>
-		<meat charset="utf-8" />
+		<meta charset="utf-8" />
         {{ Basset::show('public.css') }}
 		<style>
 			*
@@ -15,7 +15,7 @@
 				margin:0px;
 				padding:0px;
 				font-family:'微软雅黑';
-				
+				background: transparent;
 			}
 			.login_box
 			{
@@ -83,11 +83,13 @@
 			.go_rg
 			{
 				width:183px;
-				margin-top:10px;
 				margin-left:130px;
+				margin-top:10px;
+				margin-bottom:10px;
 				height:39px;
 				background:url({{{ asset('images/go_rg.png') }}});
 				cursor:pointer;
+				border:0px;
 			}
 		</style>
 	</head>
@@ -116,7 +118,7 @@
 						<td><input type='text' name="username" id="username"  value="{{{ Input::old('username') }}}" /></td>
 					</tr>
 					<tr>
-						<td class="td1">密码: </td>
+						<td class="td1">密码 :&nbsp;</td>
 						<td><input type='password' name="password" id="password" /></td>
 					</tr>
 					<tr>
@@ -137,8 +139,8 @@
 					</tr>
 				</table>
 			</div>
-				<p style="text-align:center;padding-top:20px;"><input type="checkbox" checked="checked" />我已阅读和同意YO斐济<span style="color:#0099ff;">《使用条例》</span></p>
-			<button type="submit" class="go_rg"></button>
+				<div style="text-align:center;padding-top:20px;background:white;width:445px;"><input type="checkbox" checked="checked" />我已阅读和同意YO斐济<span style="color:#0099ff;">《使用条例》</span></div>
+				<div style="background:white;width:445px;"><button type="submit" class="go_rg"></button></div>
 				</form>
 			</div>
 		</div>

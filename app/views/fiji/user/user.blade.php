@@ -176,16 +176,16 @@ font-size: small;" href="/user/avatar">点击更换头像</a>
                         @endif
                         @endforeach
 						
-						
+						<div>
+							<ul class="show_page_2">
+	                            {{ $comments->appends(array('p'=>'usercomment'))->links() }}
+								<li  class="show_li_1">1</li>
+								<li  class="show_li_2">2</li>
+								<li class="show_page_next">下一页</li>
+							</ul>
+						</div>
 					</div>
-					<div>
-						<ul class="show_page_2">
-                            {{ $comments->appends(array('p'=>'usercomment'))->links() }}
-							<li  class="show_li_1">1</li>
-							<li  class="show_li_2">2</li>
-							<li class="show_page_next">下一页</li>
-						</ul>
-					</div>
+					
 			</div>
 @stop
 @section('scripts')

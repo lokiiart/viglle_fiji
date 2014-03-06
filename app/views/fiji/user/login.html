@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title></title>
-		<meat charset="utf-8" />
+		<meta charset="utf-8" />
 		<style>
 			*
 			{
@@ -15,12 +15,18 @@
 				padding:0px;
 				font-family:'微软雅黑';
 				background:#333;
+				background:transparent;
 			}
 			.login_box
 			{
 				position:relative;
 				width:470px;
 				height:480px;
+				filter:alpha(Opacity=80);
+				-moz-opacity:0.5;
+				opacity: 0.5; 
+				background:none;
+				
 			}
 			.login_close
 			{
@@ -154,6 +160,7 @@
 					</ul>
 				</div>
 			</div>
+			<iframe src="file:///Users/lihui/Sites/viglle_fiji/app/views/fiji/user/register.php" style="width:500px;height:500px;" allowTransparency="true"></iframe>
 		</div>
 	</body>
 </html>
