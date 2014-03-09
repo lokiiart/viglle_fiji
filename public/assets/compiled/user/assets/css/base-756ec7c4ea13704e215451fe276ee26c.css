@@ -7,7 +7,7 @@ body
 {
 	margin:0;
 	padding:0;
-	font-family:'Î¢ÈíÑÅºÚ';
+	font-family:'ÃÂ¢ÃˆÃ­Ã‘Ã…ÂºÃš';
 	background:#f2f2f2;
 	overflow-x:hidden;
 }
@@ -15,13 +15,34 @@ body
 {
 	width: 100%;
 }
-/** Í·²¿    **/
+/** ÃÂ·Â²Â¿    **/
 .head
 {
 	width:1920px;
 	height:500px;
 }
-/** Í·²¿µ¼º½À¸  **/
+/** ÃÂ·Â²Â¿ÂµÂ¼ÂºÂ½Ã€Â¸  **/
+
+#cboxContent {
+	background: transparent;
+}
+
+#cboxLoadedContent{
+	background: transparent;
+}
+
+.cboxIframe {
+background: transparent;
+}
+
+#cboxLoadedContent {
+background: transparent; 
+padding: 1px;
+}
+#cboxOverlay
+{
+	background: black;
+}
 .head_list
 {
 	width:1000px;
@@ -74,6 +95,14 @@ ul
 {
 	width:80px;
 }
+.list_card li a:hover
+{
+	color:#ff9500;
+}
+.active
+{
+	color:#ff9500;
+}
 .login_card li
 {
 	width:50px;
@@ -100,7 +129,7 @@ ul
 	margin-top:128px;
 	margin-left:255px;
 }
-/** ÕıÎÄ **/
+/** Ã•Ã½ÃÃ„ **/
 .content
 {
 	width:1000px;
@@ -123,7 +152,7 @@ ul
 	width:100%;
 	
 }
-/** Î²²¿  **/
+/** ÃÂ²Â²Â¿  **/
 .bottom
 {
 	margin-top: 50px;
