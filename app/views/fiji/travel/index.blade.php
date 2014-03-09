@@ -1,7 +1,7 @@
 @extends('fiji.layouts.default')
 
 @section('styles')
-<link rel="stylesheet" type="text/css" href="{{{ asset('css/travel.css') }}}" />
+{{ Basset::show('travel.css') }}
 @stop
 
 

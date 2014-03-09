@@ -1,12 +1,11 @@
 .head
 {
-	height:650px;
+	background:url(../assets/images/user_big.jpg) center 0px;
 }
 .content
 {
-	height:2805px;
+	margin-top: 25px;
 }
-/** Í·²¿ **/
 #user_mes
 {
 	clear:both;
@@ -34,7 +33,7 @@
 	background:url(../images/set.png);
 	cursor:pointer;
 	margin-left:670px;
-	margin-top:45px;
+	margin-top:40px;
 }
 .user_word
 {
@@ -111,6 +110,7 @@
 	width:100%;
 	height:250px;
 	background:white;
+	border:1px solid #e6e6e6;
 }
 .content_show_pic div
 {
@@ -149,7 +149,7 @@
 	height:1250px;
 	width:100%;
 	margin-top:30px;
-	background:#e6e6e6;
+	background:;
 }
 .content_user_show
 {
@@ -162,6 +162,7 @@
 	height:35px;
 	width:100%;
 	background:#f2f2f2;
+	margin:0px;
 }
 .content_user_ul li
 {
@@ -313,12 +314,13 @@
 	text-align:center;
 	line-height:40px;
 	margin-left:10px;
+	margin-bottom: 20px;
 	cursor:pointer;
 }
 .show_page_next,.show_li_2
 {
 	color:#808080;
-	background:#e6e6e6;
+	background:white;
 }
 .show_page_next
 {

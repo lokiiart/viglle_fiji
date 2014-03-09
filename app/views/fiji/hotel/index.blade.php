@@ -3,7 +3,7 @@
 @section('styles')
 		@parent
 		
-		<link rel="stylesheet" type="text/css" href="{{{ asset('assets/css/hotel.css') }}}" />
+		{{ Basset::show('hotel.css') }}
 		
 
 

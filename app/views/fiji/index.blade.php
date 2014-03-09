@@ -1,8 +1,7 @@
 @extends('fiji.layouts.default')
 @section('styles')
 		@parent
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
-		<link rel="stylesheet" type="text/css" href="{{{ asset('assets/css/hotel.css') }}}" />
+		{{ Basset::show('index.css') }}
 		<style>
 			.head{background:url(../assets/images/index.jpg) center 0px;}
 		</style>
@@ -324,4 +323,6 @@
 				}
 			</script>
 			@stop
-		
+			@section('scripts')
+		 {{ Basset::show('index.js') }}
+		 @stop

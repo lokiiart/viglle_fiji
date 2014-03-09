@@ -1,0 +1,340 @@
+.content
+{
+	
+}
+.content_body
+{
+	height:auto;
+	clear:both;
+	border:0px solid red;
+}
+.content_title
+{
+	height:40px;
+	line-height:40px;
+	
+}
+.content_center
+{
+	height:480px;
+	width:100%;
+	margin-top:50px;
+}
+.more_raiders
+{
+	float:left;
+	display:inline;
+	width:104px;
+	height:32px;
+	background:url(/assets/images/more_raiders.png);
+	margin-top:13px;
+	margin-left:20px;
+	cursor:pointer;
+}
+.play_1
+{
+	height:500px;
+	margin-top:30px;
+	width:100%;
+}
+.play_part1
+{
+	width:350px;
+	float:left;
+}
+.play_part2
+{
+	width:410px;
+	float:left;
+}
+.play_price_bg
+{
+	margin-top:430px;
+	height:80px;
+	width:100%;
+	background:black;
+	filter: alpha(opacity=50); 
+	opacity:0.5;
+	z-index:2;
+}
+.play_price_show
+{
+	color:white;
+	line-height:80px;
+	margin-left:160px;
+}
+.play_price
+{
+	font-size:48px;
+}
+.play_part1_img1,.play_part1_img2,.play_part2_img1,.play_2_part1_img1
+{
+	width:350px;
+	background:#333;
+	z-index:1;
+}
+.play_part1_img1,.play_part1_img2
+{
+	height:250px;
+}
+.play_part1_img2
+{
+	margin-top:10px;
+}
+.play_part2_img1
+{
+	margin-left:10px;
+	height:510px;
+	float:left;
+}
+.play_2_part1_img1
+{
+	height:510px;
+	float:left;
+}
+.play_part2_word
+{
+	float:left;
+	width:50px;
+	height:510px;
+	font-size:24px;
+	color:white;
+}
+.play_part2_word_top
+{
+	width:50px;
+	height:10px;
+	background:#ff9500;
+}
+.play_part2_word_text
+{
+	width:50px;
+	height:500px;
+	background:#999;
+}
+.play_special
+{
+	padding-top:20px;
+	padding-left:10px;
+	width:30px;
+}
+.play_part3
+{
+	margin-left:10px;
+	float:left;
+	width:230px;
+	height:510px;
+	background:#333;
+}
+.play_part3_top
+{
+	height:20px;
+	width:230px;
+	background:#0099ff;
+}
+.play_part3_text
+{
+	padding-top:30px;
+	width:190px;
+	margin:0px auto;
+	color:#fff;
+	height:400px;
+	font-size:18px;
+}
+.play_2,.play_3,.play_4,.play_5
+{
+	height:500px;
+	clear:both;
+	margin-top:20px;
+}
+.play_text_bg
+{
+	height:100%;
+	width:100%;
+	background:black;
+	filter: alpha(opacity=50); 
+	opacity:0.5;
+	z-index:2;
+}
+.play_text_show
+{
+	margin:0px auto;
+	padding-top:65px;
+	width:310px;
+	height:150px;
+	font-size:18px;
+	color:white;
+}
+/*主体信息*/
+.plane
+{
+	width:378px;
+	height:100%;
+	float:left;
+}
+.plane_search
+{
+	width:378px;
+	height:370px;
+	border:3px solid #0099ff;
+	margin-top:27px;
+}
+.plane_show
+{
+	float:left;
+	width:377px;
+	height:405px;
+	border:3px solid #0099ff;
+	border-left:0px;
+	margin-top:27px;
+}
+.plane_mes
+{
+	font-size:18px;
+	color:#333;
+	width:280px;
+	margin:50px auto;
+}
+.plane_bg
+{
+	width:379px;
+	height:35px;
+	background:#0099ff;
+}
+.inputs
+{
+	width:180px;
+	height:30px;
+	border:1px solid #0099ff;
+}
+.td1
+{
+	width:105px;
+	text-align:center;
+	height:50px;
+	line-height:50px;
+}
+.td2
+{
+	height:80px;
+	line-height:80px;
+}
+.search
+{
+	cursor:pointer;
+	width:150px;
+	height:40px;
+	background:url(/assets/images/plane_search.png);
+}
+.tr1
+{
+	background:#0099ff;
+	color:white;
+}
+.tr1 .plane_price_td
+{
+	background:#ff9500;
+}
+.tr2:hover
+{
+	background:#0099ff;
+}
+.plane_price_td
+{
+	height:50px;
+	line-height:50px;
+	width:110px;
+	text-align:center;
+}
+.weather
+{
+	float:left;
+	width:220px;
+	height:475px;
+	margin-left:20px;
+	border:1px solid red;
+	margin-top:-38px;
+}
+.weather_top
+{
+	height:50px;
+	line-height:50px;
+	color:white;
+	width:100%;
+	-moz-border-radius:5px;/*仅Firefox支持，实现圆角效果*/
+	-webkit-border-radius:5px;/*仅Safari,Chrome支持，实现圆角效果*/
+	-khtml-border-radius:5px;/*仅Safari,Chrome支持，实现圆角效果*/
+	border-radius:5px;/*仅Opera，Safari,Chrome支持，实现圆角效果*/
+	background:#ff9500;
+}
+.user_img
+{
+	height:250px;
+	width:100%;
+}
+.user_mes
+{
+	width:319px;
+	height:388px;
+	background:#0099ff;
+	float:left;
+	margin-right:20px;
+	margin-top:20px;
+}
+.user_mes ul li
+{
+	
+}
+.user_img
+{
+	z-index:1;
+}
+.user_name
+{
+	height:125px;
+	background:white;
+	position:relative;
+}
+.user_call
+{
+	width:100%;
+	height:7px;
+	background:#0099ff;
+}
+.user_name_box
+{
+	position:absolute;
+	top:-20px;
+	left:45px;
+	width:230px;
+	height:42px;
+	background:#ff9500;
+	text-align:center;
+	color:white;
+	line-height:42px;
+	font-size:18px;
+	z-index:2;
+}
+.user_word
+{
+	position:absolute;
+	top:30px;
+	left:40px;
+	width:270px;
+	color:#333;
+	font-size:16px;
+}
+.user_talk
+{
+	position:absolute;
+	cursor:pointer;
+	top:89px;
+	left:260px;
+	width:40px;
+	height:50px;
+	background:url(/assets/images/message1.png);
+}
+.user_talk:hover
+{
+	background:url(/assets/images/message2.png);
+}

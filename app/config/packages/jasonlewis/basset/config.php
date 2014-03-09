@@ -41,7 +41,98 @@ return array(
             {
                 $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
                 //$collection->add('bootstrap/bootstrap.js');
-                $collection->requireDirectory('../../../vendor/twbs/bootstrap/js');
+                //$collection->requireDirectory('../../../vendor/twbs/bootstrap/js');
+                $collection->add('jquery.colorbox.js');
+            })->apply('JsMin');
+        },
+        'index' => function($collection)
+        {
+            $collection->directory('assets/css', function($collection)
+            {
+                $collection->add('less/master.less')->apply('Less');
+				$collection->add('base.css');
+                $collection->add('colorbox.css');
+				$collection->add('index.css');
+                $collection->add('hotel.css');
+            })->apply('UriRewriteFilter')->apply('CssMin');
+
+            $collection->directory('assets/js', function($collection)
+            {
+                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                //$collection->add('bootstrap/bootstrap.js');
+                //$collection->requireDirectory('../../../vendor/twbs/bootstrap/js');
+                $collection->add('jquery.colorbox.js');
+            })->apply('JsMin');
+        },
+        'hotel' => function($collection)
+        {
+            $collection->directory('assets/css', function($collection)
+            {
+                $collection->add('less/master.less')->apply('Less');
+				$collection->add('base.css');
+                $collection->add('colorbox.css');
+                $collection->add('hotel.css');
+            })->apply('UriRewriteFilter')->apply('CssMin');
+
+            $collection->directory('assets/js', function($collection)
+            {
+                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                //$collection->add('bootstrap/bootstrap.js');
+                //$collection->requireDirectory('../../../vendor/twbs/bootstrap/js');
+                $collection->add('jquery.colorbox.js');
+            })->apply('JsMin');
+        },
+        'ticket' => function($collection)
+        {
+            $collection->directory('assets/css', function($collection)
+            {
+                $collection->add('less/master.less')->apply('Less');
+				$collection->add('base.css');
+                $collection->add('colorbox.css');
+                $collection->add('air.css');
+            })->apply('UriRewriteFilter')->apply('CssMin');
+
+            $collection->directory('assets/js', function($collection)
+            {
+                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                //$collection->add('bootstrap/bootstrap.js');
+                //$collection->requireDirectory('../../../vendor/twbs/bootstrap/js');
+                $collection->add('jquery.colorbox.js');
+            })->apply('JsMin');
+        },
+        'travel' => function($collection)
+        {
+            $collection->directory('assets/css', function($collection)
+            {
+                $collection->add('less/master.less')->apply('Less');
+				$collection->add('base.css');
+                $collection->add('colorbox.css');
+                $collection->add('travel.css');
+            })->apply('UriRewriteFilter')->apply('CssMin');
+
+            $collection->directory('assets/js', function($collection)
+            {
+                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                //$collection->add('bootstrap/bootstrap.js');
+                //$collection->requireDirectory('../../../vendor/twbs/bootstrap/js');
+                $collection->add('jquery.colorbox.js');
+            })->apply('JsMin');
+        },
+        'customer' => function($collection)
+        {
+            $collection->directory('assets/css', function($collection)
+            {
+                $collection->add('less/master.less')->apply('Less');
+				$collection->add('base.css');
+                $collection->add('colorbox.css');
+                $collection->add('user.css');
+            })->apply('UriRewriteFilter')->apply('CssMin');
+
+            $collection->directory('assets/js', function($collection)
+            {
+                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                //$collection->add('bootstrap/bootstrap.js');
+                //$collection->requireDirectory('../../../vendor/twbs/bootstrap/js');
                 $collection->add('jquery.colorbox.js');
             })->apply('JsMin');
         },
@@ -58,7 +149,7 @@ return array(
             {
                 $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
                 //$collection->add('bootstrap/bootstrap.js');
-                $collection->requireDirectory('../../../vendor/twbs/bootstrap/js');
+                //$collection->requireDirectory('../../../vendor/twbs/bootstrap/js');
                 $collection->add('jquery.colorbox.js');
             })->apply('JsMin');
         },

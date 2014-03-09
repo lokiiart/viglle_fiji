@@ -1,7 +1,7 @@
 @extends('fiji.layouts.default')
 @section('styles')
 
-
+{{ Basset::show('public.css') }}
 		<link rel="stylesheet" type="text/css" href="{{{ asset('css/raiders_w.css') }}}" />
 
 

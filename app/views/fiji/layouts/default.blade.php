@@ -16,7 +16,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- CSS
 		================================================== -->
-        {{ Basset::show('public.css') }}
+       
 
 		@section('styles')
 		@show

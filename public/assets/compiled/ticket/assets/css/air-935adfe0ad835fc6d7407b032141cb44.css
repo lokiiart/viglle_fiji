@@ -1,0 +1,343 @@
+.content
+{
+	height:auto;
+}
+/** 搜索框部分  **/
+.line
+{
+	margin-top:30px;
+}
+.head
+{
+	background:url(/assets/images/plane.jpg) center 0px;
+}
+.line_show
+{
+	width:100%;
+	height:512px;
+	height:512px;
+}
+.line_show ul li
+{
+	float:left;
+	width:160px;
+	overflow:hidden;
+	height:512px;
+}
+.hpanel
+{
+	width:360px;
+	height:100%;
+	position:relative;
+	cursor:pointer;
+}
+.lines_word
+{
+	position:absolute;
+	top:0px;
+	left:10px;
+	width:40px;
+	height:512px;
+	background:black;
+	filter: alpha(opacity=50); 
+	opacity:0.5;
+	color:white;
+	font-size:24px;
+	text-align:center;
+}
+.roads_word
+{
+	position:absolute;
+	top:330px;
+	left:0px;
+	height:170px;
+	width:100%;
+	background:black;
+	filter: alpha(opacity=50); 
+	opacity:0.5;
+	color:white;
+	text-align:center;
+}
+.search
+{
+	margin-top:20px;
+	height:48px;
+	width:998px;
+	border:1px solid #808080;
+}
+.search_box
+{
+	margin-top:8px;
+	margin-left:30px;
+}
+.city
+{
+	float:left;
+	width:90px;
+	height:28px;
+	border:1px solid #ff9500;
+}
+.city_border
+{
+	float:left;
+	width:30px;
+	height:30px;
+	background:#ff9500;
+}
+.fly
+{
+	margin-left:10px;
+	margin-top:3px;
+	float:left;
+	width:37px;
+	height:21px;
+	background:url(/assets/images/fly.png);
+}
+.go_city
+{
+	float:left;
+	font-size:24px;
+	color:#0f7ffa;
+	margin-left:10px;
+	margin-top:-3px;
+}
+.date_about
+{
+	float:left;
+	font-size:24px;
+	color:#999;
+	margin-left:130px;
+	margin-top:-3px;
+}
+.date_time
+{
+	float:left;
+	margin-left:20px;
+}
+.gosearch
+{
+	margin-left:30px;
+	margin-top:-3px;
+	float:left;
+	width:78px;
+	height:37px;
+	background:url(/assets/images/gosearch.png);
+	cursor:pointer;
+}
+.order_by
+{
+	width:998px;
+	height:38px;
+	border:1px solid #808080;
+	background:#e2e3e5;
+}
+.order_by ul li
+{
+	font-size:18px;
+	color:#333;
+	float:left;
+	margin-left:30px;
+	margin-top:10px;
+}
+.order_by ul li img
+{
+	margin-left:8px;
+	cursor:pointer;
+}
+/** 搜索框结束 **/
+/** 结果框 开始 **/
+.show_result
+{
+	margin-top:20px;
+	width:998px;
+	height:248px;
+	border:1px solid #808080;
+}
+.ticket_msg
+{
+	width:990px;
+	height:230px;
+	margin-top:10px;
+	margin-left:10px;
+}
+.ticket_img
+{
+	float:left;
+	width:230px;
+	height:230px;
+	position:relative;
+}
+.ticket_msg img
+{
+	width:230px;
+	height:230px;
+}
+.plane_size
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:60px;
+	height:60px;
+	background:url(/assets/images/size.png);
+	color:white;
+}
+.tickets_company
+{
+	position:absolute;
+	top:190px;
+	background:black;
+	filter: alpha(opacity=50); 
+	opacity:0.5;
+	color:white;
+	text-align:center;
+	width:100%;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+}
+.plane_size p
+{
+	margin-left:4px;
+}
+.ticket_content
+{
+	margin-left:10px;
+	float:left;
+	width:738px;
+	height:230px;
+}
+.ticket_where
+{
+	height:60px;
+	width:100%;
+	background:#f2f2f2;
+	float:left;
+}
+.ticket_where div
+{
+	margin-top:10px;
+}
+.ticket_a,.ticket_b
+{
+	margin-left:30px;
+	float:left;
+	width:100px;
+}
+.ticket_b
+{
+	margin-left:25px;
+	width:150px;
+}
+.ticket_city
+{
+	font-size:14px;
+	color:#0099ff;
+}
+.ticket_to
+{
+	
+	margin-top:20px !important;
+	float:left;
+	width:35px;
+	height:25px;
+	background:url(/assets/images/to.png);
+}
+.ticket_full_mes
+{
+	float:left;
+	margin-left:24px;
+	font-size:14px;
+	width:185px;
+}
+.ticket_price,.ticekt_full_li3
+{
+	margin-top:0px !important;
+	float:left;
+	width:120px;
+	height:100%;
+	background:#333333;
+	margin-left:68px;
+}
+.ticket_price_all
+{
+	font-size:24px;
+	color:white;
+	line-height:60px;
+	text-align:center;
+}
+.ticket_choice
+{
+	position:relative;
+	top:10px;
+	clear:both;
+	margin-top:10px;
+	height:160px;
+	width:100%;
+}
+.ticket_ship_choice
+{
+	background:#f2f2f2;
+	width:160px;
+	height:45px;
+	text-align:center;
+	line-height:45px;
+	margin-top:12px;
+	font-size:18px;
+	color:#0099ff;
+	z-index:1;
+}
+.ticket_ship_bg
+{
+	width:7px;
+	height:45px;
+	background:#0099ff;
+	z-index:2;
+	display:;
+	float:left;
+}
+.ticket_full_left
+{
+	float:left;
+	width:160px;
+}
+.ticket_full_right
+{
+	float:left;
+	margin-left:8px;
+	width:570px;
+	height:100%;
+	background:#f2f2f2;
+	color:#404040;
+	font-size:18px;
+}
+.ticket_full_first
+{
+	margin-top:10px;
+	height:45px;
+	width:100%;
+}
+
+.ticket_full_first ul li
+{
+	height:45px;
+	line-height:45px;
+	float:left;
+	text-align:center;
+}
+.ticekt_full_li3
+{
+	
+}
+.ticekt_full_li1
+{
+	width:160px;
+}
+.ticekt_full_li2
+{
+	width:180px;
+}
+.ticekt_full_li3
+{
+	margin-left:110px;
+}
