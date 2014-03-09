@@ -37,10 +37,11 @@
 
 
 
-									<!--<li class="share"></li>-->
+									<!--li class="share"></li-->
 								</ul>
 							</div>
 						</div>
+
 						<div class="raiders_more">
 							<div class="raiders_more_list_1">
 								<div class="raiders_list_1_top"></div>

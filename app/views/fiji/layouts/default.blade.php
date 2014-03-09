@@ -14,14 +14,12 @@
 		<!-- Mobile Specific Metas
 		================================================== -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 		<!-- CSS
 		================================================== -->
         {{ Basset::show('public.css') }}
 
 		@section('styles')
 		@show
-
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -41,13 +39,13 @@
 				<div class="head" style="position:absolute;top:0px;z-index:1;"></div>
 				<div style="width:1000px;margin-right:auto;margin-left:auto;z-index:2;position:relative;height:630px;">
 					<div class="head_list">
-						<div class="logo"></div>
+						<div class="logo"><a href="{{{ URL::to('/') }}}" style="display:block;width:100%;height:100%;"></a></div>
 						<div class="list">
 							<ul class="list_card">
-									<li><a href="{{{ URL::to('/') }}}">首页</a></li>
-									<li class="list_index"><a href="{{{ URL::to('/hotel/index') }}}">酒店</a></li>
-								<li><a href="{{{ URL::to('/ticket/index') }}}">机票</a></li>
-								<li class="list_end"><a href="{{{ URL::to('/travel/index') }}}">攻略</a></li>
+									<li><a href="{{{ URL::to('/') }}}" {{ (Request::is('/') ? ' class="active"' : '')}}>首页</a></li>
+									<li class="list_index"><a href="{{{ URL::to('/hotel/index') }}}" {{ (Request::is('hotel/index') ? ' class="active"' : '')}}>酒店</a></li>
+								<li><a href="{{{ URL::to('/ticket/index') }}}" {{ (Request::is('ticket/index') ? ' class="active"' : '')}}>机票</a></li>
+								<li class="list_end"><a href="{{{ URL::to('/travel/index') }}}" {{ (Request::is('travel/index') ? ' class="active"' : '')}}>攻略</a></li>
 							</ul>
 						</div>
 						<div class="login">
@@ -91,7 +89,7 @@
 		@show
 		<script>
 				$(document).ready(function(){
-						$(".iframe").colorbox({iframe:true,width:"480px",height:"670px"});
+						$(".iframe").colorbox({iframe:true,width:"480px",height:"670px:",opacity:"0.5"});
 						$(".login_close").click(function(){
 							$.colorbox.close();
 						});

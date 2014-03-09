@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title></title>
-		<meat charset="utf-8" />
+		<meta charset="utf-8" />
         {{ Basset::show('public.css') }}
 		<style>
 			*
@@ -121,14 +121,14 @@
 			}
 		</style>
 	</head>
-	<body>
+	<body style="background-color:transparent;">
 		<div class="login_box">
 			<div class="login_close" onclick="window.parent.$.colorbox.close();"></div>
 			<div class="login_top"></div>
 			<div class="mes_box">
 				<p class="mes_title"><span>使用YO斐济账号登录</span><span style="font-size:14px;padding-left:80px;">没有帐号?</span><span style="font-size:14px;color:#197ed6;cursor:pointer;"><a href={{{ URL::to('user/create') }}}>立即注册</a></span></p>
-<form class="form-horizontal" id="form1" method="POST" action="{{ URL::to('user/login') }}" accept-charset="UTF-8">
-    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+			<form class="form-horizontal" id="form1" method="POST" action="{{ URL::to('user/login') }}" accept-charset="UTF-8">
+    			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 				<table cellspacing=0 cellpadding=0 style="font-size:18px;color:#313131;" class="mes_show">
 					<tr>
@@ -136,7 +136,7 @@
 						<td><input type="text" name="email" id="email" value="{{{ Input::old('email') }}}" /></td>
 					</tr>
 					<tr>
-						<td class="td1">密码 :&nbsp; </td>
+						<td class="td1">密码:&nbsp; </td>
 						<td><input type="password" name="password" id="password" /></td>
 					</tr>
 					<tr>

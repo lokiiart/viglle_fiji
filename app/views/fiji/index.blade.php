@@ -111,32 +111,32 @@
 					</div>
 					<div class="plane_show">
 						<table cellspacing=8 cellpadding=0 style="font-size:18px;width:340px;margin:40px auto;border:0px solid red;">
-							<tr>
+							<tr class="tr1">
 								<td class="plane_date_td">2013/12/13</td>
 								<td class="plane_city_td">香港 - 斐济</td>
 								<td class="plane_price_td">￥3968元</td>
 							</tr>
-							<tr>
+							<tr class="tr2" onmouseover="Isover(this)" onmouseout="Isout(this)">
 								<td class="plane_date_td">2013/12/13</td>
 								<td class="plane_city_td">香港 - 斐济</td>
 								<td class="plane_price_td">￥3968元</td>
 							</tr>
-							<tr>
+							<tr class="tr2" onmouseover="Isover(this)" onmouseout="Isout(this)">
 								<td class="plane_date_td">2013/12/13</td>
 								<td class="plane_city_td">香港 - 斐济</td>
 								<td class="plane_price_td">￥3968元</td>
 							</tr>
-							<tr>
+							<tr class="tr2" onmouseover="Isover(this)" onmouseout="Isout(this)">
 								<td class="plane_date_td">2013/12/13</td>
 								<td class="plane_city_td">香港 - 斐济</td>
 								<td class="plane_price_td">￥3968元</td>
 							</tr>
-							<tr>
+							<tr class="tr2" onmouseover="Isover(this)" onmouseout="Isout(this)">
 								<td class="plane_date_td">2013/12/13</td>
 								<td class="plane_city_td">香港 - 斐济</td>
 								<td class="plane_price_td">￥3968元</td>
 							</tr>
-							<tr>
+							<tr class="tr2" onmouseover="Isover(this)" onmouseout="Isout(this)">
 								<td class="plane_date_td">2013/12/13</td>
 								<td class="plane_city_td">香港 - 斐济</td>
 								<td class="plane_price_td">￥3968元</td>
@@ -264,7 +264,7 @@
 					</div>
 				</div>
 				<div class="content_bottom"></div>
-				<div style="height:845px;width:100%;margin-top:45px;">
+				<div style="height:885px;width:100%;margin-top:45px;">
 					<p><span style="font-size:30px;margin-left:30px;color:#ff9500;">人气</span><span style="font-size:18px;color:#333;">之星</span></p>
 					<ul style="margin-right:-20px">
 @foreach($users as $user)
@@ -313,6 +313,14 @@
 				function close_bg(num)
 				{
 					$(".hotel_base").eq(num).slideUp("fast");
+				}
+				function  Isover(obj)
+				{
+					obj.className="tr1";
+				}
+				function Isout(obj)
+				{
+					obj.className="tr2";
 				}
 			</script>
 			@stop

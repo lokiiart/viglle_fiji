@@ -1,7 +1,7 @@
 .content
 {
 margin-top:50px;
-		
+
 }
 .content_body
 {
@@ -52,6 +52,7 @@ background:#ff9500;
 .content_show
 {
 width:1000px;
+border-radius:3px;
 float:left;
 height:auto;
 background:#e6e6e6;
@@ -60,10 +61,12 @@ border:0px solid red;
 .content_show_text
 {
 float:left;
-width:700px;
-height:auto;
+width:690px;
+height:820px;
 background:white;
-margin:30px auto;
+margin-top:30px;
+margin-left:10px;
+border:1px solid #999;
 }
 .content_show_title
 {
@@ -111,8 +114,9 @@ color:#0099ff;
 }
 .raiders_show_html
 {
-height:auto;
+height:640px;
 width:100%;
+background: white;
 border:0px solid red;
 }
 .raiders_other_mes
@@ -132,10 +136,15 @@ cursor:pointer;
 float:left;
 width:278px;
 height:860px;
+background: white;
 border:0px solid red;
 margin-left:22px;
 }
+.raiders_more_list_1
+{
 
+	background:#e6e6e6;
+}
 .good
 {
 background:url(../images/good.png);
@@ -180,178 +189,182 @@ height:7px;
 background:#0099ff;
 }
 .user_name_box
-																																																															{
-																																																																																							position:absolute;
-																																																																																								top:-20px;
-																																																																																									left:45px;
-																																																																																										width:230px;
-																																																																																											height:42px;
-																																																																																												background:#ff9500;
-																																																																																													text-align:center;
-																																																																																														color:white;
-																																																																																															line-height:42px;
-																																																																																																font-size:18px;
-																																																																																																	z-index:2;
-																																																																																															}
-																																																																																															.user_word
-																																																																																															{
-																																																																																																		position:absolute;
-																																																																																																			top:30px;
-																																																																																																				left:40px;
-																																																																																																					width:270px;
-																																																																																																						color:#333;
-																																																																																																							font-size:16px;
-																																																																																																					}
-																																																																																																					.user_talk
-																																																																																																					{
-																																																																																																								position:absolute;
-																																																																																																									cursor:pointer;
-																																																																																																										top:89px;
-																																																																																																											left:260px;
-																																																																																																												width:40px;
-																																																																																																													height:50px;
-																																																																																																														background:url(../images/message1.png);
-																																																																																																												}
-																																																																																																												.user_talk:hover
-																																																																																																												{
-																																																																																																															background:url(../images/message2.png);
-																																																																																																													}
+{
+position:absolute;
+top:-20px;
+left:45px;
+width:230px;
+height:42px;
+background:#ff9500;
+text-align:center;
+color:white;
+line-height:42px;
+font-size:18px;
+z-index:2;
+}
+.user_word
+{
+position:absolute;
+top:30px;
+left:40px;
+width:270px;
+color:#333;
+font-size:16px;
+}
+.user_talk
+{
+position:absolute;
+cursor:pointer;
+top:89px;
+left:260px;
+width:40px;
+height:50px;
+background:url(../images/message1.png);
+}
+.user_talk:hover
+{
+background:url(../images/message2.png);
+}
 
 
-																																																																																																													.show_page_1 li,.show_page_2 li
-																																																																																																													{
-																																																																																																																margin-top:30px;
-																																																																																																																	float:left;
-																																																																																																																		width:30px;
-																																																																																																																			height:40px;
-																																																																																																																				text-align:center;
-																																																																																																																					line-height:40px;
-																																																																																																																						margin-left:10px;
-																																																																																																																							cursor:pointer;
-																																																																																																																					}
-																																																																																																																					.show_page_next,.show_li_2
-																																																																																																																					{
-																																																																																																																								color:#808080;
-																																																																																																																									background:#e6e6e6;
-																																																																																																																							}
-																																																																																																																							.show_page_next
-																																																																																																																							{
-																																																																																																																										width:100px !important;
-																																																																																																																								}
-																																																																																																																								.show_li_1
-																																																																																																																								{
-																																																																																																																											color:white;
-																																																																																																																												background:#ff9500;
-																																																																																																																										}
-																																																																																																																										.show_page_1,.show_page_2
-																																																																																																																										{
-																																																																																																																													margin-left:400px;
-																																																																																																																														margin-top:10px;
-																																																																																																																												}
+.show_page_1 li,.show_page_2 li
+{
+margin-top:30px;
+float:left;
+width:30px;
+height:40px;
+text-align:center;
+line-height:40px;
+margin-left:10px;
+cursor:pointer;
+}
+.show_page_next,.show_li_2
+{
+color:#808080;
+background:#e6e6e6;
+}
+.show_page_next
+{
+width:100px !important;
+}
+.show_li_1
+{
+color:white;
+background:#ff9500;
+}
+.show_page_1,.show_page_2
+{
+margin-left:400px;
+margin-top:10px;
+}
 
-																																																																																																																												.raiders_title
-																																																																																																																												{
-																																																																																																																															color:#0099ff;
-																																																																																																																													}
-																																																																																																																													.raiders_msg
-																																																																																																																													{
-																																																																																																																																width:100%;
-																																																																																																																																	height:2190px;
-																																																																																																																															}
-																																																																																																																															.raiders_user_name
-																																																																																																																															{
-																																																																																																																																		color:#ff9500;
-																																																																																																																																			text-decoration:underline;
-																																																																																																																																	}
-																																																																																																																																	.raiders_user_time
-																																																																																																																																	{
-																																																																																																																																				color:#808080;
-																																																																																																																																					margin-left:5px;
-																																																																																																																																			}
-																																																																																																																																			.raiders_user_text
-																																																																																																																																			{
-																																																																																																																																						color:#808080;
-																																																																																																																																				}
-																																																																																																																																				.raiders_user_good
-																																																																																																																																				{
-																																																																																																																																							width:49px;
-																																																																																																																																								height:49px;
-																																																																																																																																									background:url(../images/good.png);
-																																																																																																																																										cursor:pointer;
-																																																																																																																																											margin-left:650px;
-																																																																																																																																									}
-																																																																																																																																									.good_count
-																																																																																																																																									{
-																																																																																																																																												color:#ff9500;
-																																																																																																																																													margin-right:10px;
-																																																																																																																																											}
-																																																																																																																																											.content_other_mes
-																																																																																																																																											{
-																																																																																																																																														float:left;
-																																																																																																																																															width:230px;
-																																																																																																																																																height:100%;
-																																																																																																																																																	margin-left:10px;
-																																																																																																																																															}
-																																																																																																																																															.enter_raiders
-																																																																																																																																															{
-																																																																																																																																																		margin-top:35px;
-																																																																																																																																																			width:230px;
-																																																																																																																																																				height:145px;
-																																																																																																																																																					background:url(../images/enter_raiders_1.png);
-																																																																																																																																																						cursor:pointer;
-																																																																																																																																																				}
-																																																																																																																																																				.raiders_content li
-																																																																																																																																																				{
-																																																																																																																																																							margin-top:25px;
-																																																																																																																																																								float:left;
-																																																																																																																																																									background:#e6e6e6;
-																																																																																																																																																										height:200px;
-																																																																																																																																																								}
-																																																																																																																																																								.raiders_li1
-																																																																																																																																																								{
-																																																																																																																																																											clear:both;
-																																																																																																																																																												width:300px;
-																																																																																																																																																													height:200px;
-																																																																																																																																																											}
-																																																																																																																																																											.raiders_li2
-																																																																																																																																																											{
-																																																																																																																																																														width:700px;
-																																																																																																																																																															height:200px;
-																																																																																																																																																													}
-																																																																																																																																																													.raiders_list_1_top,.raiders_list_2_top
-																																																																																																																																																													{
-																																																																																																																																																																width:100%;
-																																																																																																																																																																	height:41px;
-																																																																																																																																																															}
-																																																																																																																																																															.raiders_list_1_top
-																																																																																																																																																															{
-																																																																																																																																																																		background:url(../images/eat.png);
-																																																																																																																																																																}
-																																																																																																																																																																.raiders_list_2_top
-																																																																																																																																																																{
-																																																																																																																																																																			background:url(../images/play.png);
-																																																																																																																																																																	}
-																																																																																																																																																																	.raiders_show_text li
-																																																																																																																																																																	{
-																																																																																																																																																																				width:270px;
-																																																																																																																																																																					height:30px;
-																																																																																																																																																																						line-height:30px;
-																																																																																																																																																																							font-size:14px;
-																																																																																																																																																																								margin:5px auto;
-																																																																																																																																																																									background:white;
-																																																																																																																																																																										color:#808080;
-																																																																																																																																																																											
-																																																																																																																																																																								}
-																																																																																																																																																																								.raiders_show_text li div
-																																																																																																																																																																								{
-																																																																																																																																																																											margin-left:15px;
-																																																																																																																																																																												margin-right:15px;
-																																																																																																																																																																													width:20px;
-																																																																																																																																																																														height:20px;
-																																																																																																																																																																															line-height:20px;
-																																																																																																																																																																																font-size:14px;
-																																																																																																																																																																																	color:white;
-																																																																																																																																																																																		display:inline;
-																																																																																																																																																																																			background:#ff9500;
-																																																																																																																																																																																				padding:2px;
-																																																																																																																																																																																		}
+.raiders_title
+{
+color:#0099ff;
+}
+.raiders_msg
+{
+width:100%;
+height:2190px;
+}
+.raiders_user_name
+{
+color:#ff9500;
+text-decoration:underline;
+}
+.raiders_user_time
+{
+color:#808080;
+margin-left:5px;
+}
+.raiders_user_text
+{
+color:#808080;
+}
+.raiders_user_good
+{
+width:49px;
+height:49px;
+background:url(../images/good.png);
+cursor:pointer;
+margin-left:650px;
+}
+.good_count
+{
+color:#ff9500;
+margin-right:10px;
+}
+.content_other_mes
+{
+float:left;
+width:230px;
+height:100%;
+margin-left:10px;
+}
+.enter_raiders
+{
+margin-top:35px;
+width:230px;
+height:145px;
+background:url(../images/enter_raiders_1.png);
+cursor:pointer;
+}
+.raiders_content li
+{
+margin-top:25px;
+float:left;
+background:#e6e6e6;
+height:200px;
+}
+.raiders_li1
+{
+clear:both;
+width:300px;
+height:200px;
+}
+.raiders_li2
+{
+width:700px;
+height:200px;
+}
+.raiders_list_1_top,.raiders_list_2_top
+{
+width:100%;
+height:41px;
+}
+.raiders_list_1_top
+{
+	background:url(../images/eat.png);
+	width: 278px;
+	height: 41px;
+}
+.raiders_list_2_top
+{
+	background:url(../images/play.png);
+	width: 278px;
+	height: 41px;
+}
+.raiders_show_text li
+{
+width:270px;
+height:30px;
+line-height:30px;
+font-size:14px;
+margin:5px auto;
+background:white;
+color:#808080;
+
+}
+.raiders_show_text li div
+{
+margin-left:15px;
+margin-right:15px;
+width:20px;
+height:20px;
+line-height:20px;
+font-size:14px;
+color:white;
+display:inline;
+background:#ff9500;
+padding:2px;
+}
